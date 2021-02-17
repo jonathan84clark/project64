@@ -112,11 +112,13 @@ std::string CProjectSupport::GenerateMachineID(void)
 void CProjectSupport::IncrementRunCount()
 {
     time_t now = time(nullptr);
+    /* Get rid of that annoying start dialog
     if (m_SupportInfo.LastUpdated <= now && ((now - m_SupportInfo.LastUpdated) / 60) < 60)
     {
         return;
     }
-    m_SupportInfo.RunCount += 1;
+    */
+    //m_SupportInfo.RunCount += 1;
     m_SupportInfo.LastUpdated = now;
     SaveSupportInfo();
 }
